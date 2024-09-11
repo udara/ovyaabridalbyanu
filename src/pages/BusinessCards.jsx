@@ -33,10 +33,12 @@ END:VCARD`;
                 {/* Logo */}
                 <div className="mx-auto w-full pt-12">
                     <img src={Logo} className="max-w-[150px] mx-auto" />
+                    <div className={`mx-auto w-[90%]`}>
                     <AnimatedLogo />
+                    </div>
                     <div className="flex items-center justify-center gap-3">
                         <img className="max-w-[80px] md:max-w-[100px]" src={Spear} />
-                        <p className="font-serif text-charcoal font-bold text-lg md:text-xl">By Anu</p>
+                        <p className="font-serif text-charcoal font-bold text-2xl md:text-xl">By Anu</p>
                         <img className="max-w-[80px] md:max-w-[100px] scale-x-[-1]" src={Spear} />
                     </div>
                 </div>
@@ -47,14 +49,14 @@ END:VCARD`;
 
                 {/* Telephone */}
                 <div className="text-center mt-4">
-                    <img src={Telephone} className="mx-auto max-w-[40px] md:max-w-[50px]" />
-                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-lg md:text-xl">0403 627 285</p>
+                    <img src={Telephone} className="mx-auto max-w-[50px] md:max-w-[50px]" />
+                    <p className="mt-3 md:mt-4 font-serif text-charcoal text-xl">0403 627 285</p>
                 </div>
 
                 {/* Email */}
                 <div className="text-center mt-4">
-                    <img src={Envelope} className="mx-auto max-w-[40px] md:max-w-[50px]" />
-                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-lg md:text-xl">anu@ovyaabridal.com.au</p>
+                    <img src={Envelope} className="mx-auto max-w-[50px] md:max-w-[50px]" />
+                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-xl">anu@ovyaabridal.com.au</p>
                 </div>
 
                 {/* Save Contact Button */}
