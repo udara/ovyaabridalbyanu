@@ -28,39 +28,37 @@ END:VCARD`;
     };
 
     return (
-        <div className="h-screen flex justify-center items-center w-full md:max-w-[500px] mx-auto">
-            <div className="flex  flex-col justify-between h-full w-full bg-bc bg-cover bg-cream px-4 py-6">
+        <div className="h-[calc(100dvh)] flex flex-col justify-between items-center w-full md:max-w-[500px] mx-auto  ">
+            <div className="flex flex-col justify-between flex-grow w-full bg-bc bg-cover bg-cream">
                 {/* Logo */}
-                <div className="flex justify-center">
-                    <img src={Logo} className="max-w-[150px]"/>
+                <div className="mx-auto w-full pt-12">
+                    <img src={Logo} className="max-w-[150px] mx-auto" />
+                    <AnimatedLogo />
+                    <div className="flex items-center justify-center gap-3">
+                        <img className="max-w-[80px] md:max-w-[100px]" src={Spear} />
+                        <p className="font-serif text-charcoal font-bold text-lg md:text-xl">By Anu</p>
+                        <img className="max-w-[80px] md:max-w-[100px] scale-x-[-1]" src={Spear} />
+                    </div>
                 </div>
 
-                {/* Animated Logo */}
-                <div className="flex justify-center">
-                    <AnimatedLogo />
-                </div>
 
                 {/* Spear and By Anu */}
-                <div className="flex items-center justify-center gap-3">
-                    <img className="max-w-[100px]" src={Spear}/>
-                    <p className="font-serif text-charcoal font-bold text-xl">By Anu</p>
-                    <img className="max-w-[100px] scale-x-[-1]" src={Spear}/>
-                </div>
+
 
                 {/* Telephone */}
-                <div className="text-center">
-                    <img src={Telephone} className="mx-auto max-w-[50px]"/>
-                    <p className="mt-4 font-serif text-charcoal text-xl">0403 627 285</p>
+                <div className="text-center mt-4">
+                    <img src={Telephone} className="mx-auto max-w-[40px] md:max-w-[50px]" />
+                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-lg md:text-xl">0403 627 285</p>
                 </div>
 
                 {/* Email */}
-                <div className="text-center">
-                    <img src={Envelope} className="mx-auto max-w-[50px]"/>
-                    <p className="mt-4 font-serif text-charcoal text-xl">anu@ovyaabridal.com.au</p>
+                <div className="text-center mt-4">
+                    <img src={Envelope} className="mx-auto max-w-[40px] md:max-w-[50px]" />
+                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-lg md:text-xl">anu@ovyaabridal.com.au</p>
                 </div>
 
                 {/* Save Contact Button */}
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-6 md:mt-8 mb-6">
                     <div onClick={downloadVCard} className="bg-charcoal flex w-[150px] h-[40px] font-serif font-bold text-white rounded-full items-center justify-center cursor-pointer">
                         Save Contact
                     </div>
