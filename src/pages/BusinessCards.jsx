@@ -33,7 +33,7 @@ END:VCARD`;
                 {/* Logo */}
                 <div className="mx-auto w-full pt-12">
                     <img src={Logo} className="max-w-[150px] mx-auto" />
-                    <div className={`mx-auto w-[90%]`}>
+                    <div className={`mx-auto min-h-[110px] w-[90%] mt-2`}>
                     <AnimatedLogo />
                     </div>
                     <div className="flex items-center justify-center gap-3">
