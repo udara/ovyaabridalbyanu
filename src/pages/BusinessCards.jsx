@@ -1,12 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom'
 import AnimatedLogo from '../components/AnimatedLogo';
 import Logo from '../assets/img/logo.png';
 import Spear from '../assets/img/spear.png';
 import Telephone from '../assets/img/telephone.png';
 import Envelope from '../assets/img/envelope.png';
+import GalleryModal from "../components/BusinessCard/Modal";
+import ImageGallery from "../components/BusinessCard/ImageGallery";
 
 function BusinessCard() {
+    const [menuVisible, setMenuVisible] = useState(false);
+    const [galleryModalVisible, setGalleryModalVisible] = useState(false);
+
+    const images = [
+        '/images/gallery/1.png',
+        '/images/gallery/2.png',
+        '/images/gallery/3.png',
+        '/images/gallery/4.png',
+        '/images/gallery/5.png',
+        '/images/gallery/6.png',
+    ];
+
+
+    const toggleMenu = () => {
+        setMenuVisible(!menuVisible);
+    };
+
+    const toggleGalleryModal = () => {
+        setGalleryModalVisible(!galleryModalVisible);
+    };
+
     const downloadVCard = () => {
+        toggleMenu();
         const vCardData = `BEGIN:VCARD
 VERSION:3.0
 N:Rupasinghe ;Anu;;;
@@ -30,6 +55,10 @@ END:VCARD`;
     return (
         <div className="h-[calc(100dvh)] flex flex-col justify-between items-center w-full md:max-w-[500px] mx-auto  ">
             <div className="flex flex-col justify-between flex-grow w-full bg-bc bg-cover bg-cream">
+                <GalleryModal isVisible={galleryModalVisible} onClose={toggleGalleryModal}>
+                    {/* Image Gallery */}
+                    <ImageGallery images={images} />
+                </GalleryModal>
                 {/* Logo */}
                 <div className="mx-auto w-full pt-12">
                     <img src={Logo} className="max-w-[150px] mx-auto" />
@@ -59,10 +88,21 @@ END:VCARD`;
                     <p className="mt-2 md:mt-4 font-serif text-charcoal text-xl">anu@ovyaabridal.com.au</p>
                 </div>
 
+                {/* Toggleable Menu */}
+                {menuVisible && (
+                    <div className="absolute bottom-[75px] left-1/2 transform -translate-x-1/2 flex flex-col bg-white shadow-lg p-4 rounded-lg space-y-2 z-10">
+                        <button onClick={downloadVCard} className="bg-charcoal text-white px-4 py-2 rounded-md">Save Contact</button>
+                        <button onClick={toggleGalleryModal} className="bg-charcoal text-white px-4 py-2 rounded-md">View Gallery</button>
+                        <Link to={`https://www.facebook.com/ovyaabridalbyanu`}>
+                            <button className="bg-charcoal w-full text-white px-4 py-2 rounded-md">Facebook</button>
+                        </Link>
+                    </div>
+                )}
+
                 {/* Save Contact Button */}
                 <div className="flex justify-center mt-6 md:mt-8 mb-6">
-                    <div onClick={downloadVCard} className="bg-charcoal flex w-[150px] h-[40px] font-serif font-bold text-white rounded-full items-center justify-center cursor-pointer">
-                        Save Contact
+                    <div onClick={toggleMenu} className="bg-charcoal flex w-[150px] h-[40px] font-serif font-bold text-white rounded-full items-center justify-center cursor-pointer">
+                        More options
                     </div>
                 </div>
             </div>
