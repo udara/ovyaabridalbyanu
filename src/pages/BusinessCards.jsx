@@ -96,6 +96,9 @@ END:VCARD`;
                         <Link to={`https://www.facebook.com/ovyaabridalbyanu`}>
                             <button className="bg-charcoal w-full text-white px-4 py-2 rounded-md">Facebook</button>
                         </Link>
+                        <Link to={`tel:0403627285`}>
+                            <button className="bg-charcoal w-full text-white px-4 py-2 rounded-md">Call me</button>
+                        </Link>
                     </div>
                 )}
 
