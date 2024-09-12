@@ -1,9 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 function ImageGallery({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
+    const [preloadedImages, setPreloadedImages] = useState([]);
+
+    // Preload images when the component mounts
+    useEffect(() => {
+        const preloadImages = images.map((src) => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+        setPreloadedImages(preloadImages);
+    }, [images]);
 
     const handleNext = () => {
         if (isAnimating) return;
@@ -11,7 +22,7 @@ function ImageGallery({ images }) {
         setTimeout(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
             setIsAnimating(false);
-        }, 500); // Slightly longer delay for smoother transition
+        }, 500);
     };
 
     const handlePrev = () => {
@@ -22,7 +33,7 @@ function ImageGallery({ images }) {
                 prevIndex === 0 ? images.length - 1 : prevIndex - 1
             );
             setIsAnimating(false);
-        }, 500); // Slightly longer delay for smoother transition
+        }, 500);
     };
 
     const swipeHandlers = useSwipeable({
@@ -33,7 +44,7 @@ function ImageGallery({ images }) {
     return (
         <div {...swipeHandlers} className="w-full flex flex-col items-center">
             <div className="w-full max-h-[700px] mb-4 rounded-lg overflow-hidden relative">
-                {/* Smooth transition effect for the image */}
+                {/* Display the current image */}
                 <img
                     src={images[currentIndex]}
                     alt={`Image ${currentIndex + 1}`}
