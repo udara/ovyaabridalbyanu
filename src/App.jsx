@@ -17,7 +17,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path='/bc' exact element={<BusinessCards/>}/>
-                    <Route path='*' element={<NotFound/>}/>
+                    <Route path='*' element={<BusinessCards/>}/>
                 </Routes>
             </Router>
         </Provider>
