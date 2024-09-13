@@ -4,6 +4,13 @@ import '../css/CursiveWritingAnimation.css'; // Move the CSS into a separate fil
 const AnimatedLogo = () => {
     return (
         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+            <defs>
+                <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: '#baa68e', stopOpacity: 1 }} />
+                    <stop offset="50%" style={{ stopColor: '#bf9467', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: '#a18360', stopOpacity: 1 }} />
+                </linearGradient>
+            </defs>
             <path className="cursive-path"
                   d="M53.38,138.37c-24.15.85-29.54-26.17-21.5-45.2-15.53-10.12-9.47-33.6,4.26-42.49,25.89-19.42,72.05-6.7,68.54,30.76,6.89-3.7,12.17-10.42,16.33-15.64,3.1,4.52-12.31,17.17-16.79,19.78-2.15,25.07-24.55,51.81-50.83,52.79ZM57.18,95.7c13.21.04,28.69-4.29,40.6-10.58,7.22-67.4-91.6-40.73-63.83,3.22,7.61-14.48,26.6-41.72,45.2-29.67-18.33-1.62-31.69,18.91-39.33,33.7,4.68,2.22,10.46,3.33,17.36,3.33ZM54.3,135.61c22.33-1.41,38.78-25.89,42.67-46.34-17.18,8.99-40.7,13.83-58.76,7.13-6.99,15.63-4.68,39.75,16.1,39.21Z"
                   fill="#020202"/>

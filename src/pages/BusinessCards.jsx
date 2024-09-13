@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import AnimatedLogo from '../components/AnimatedLogo';
 import Logo from '../assets/img/logo.png';
 import Spear from '../assets/img/spear.png';
-import Telephone from '../assets/img/telephone.png';
+import Whatsapp from '../assets/img/whatsapp.png';
 import Envelope from '../assets/img/envelope.png';
 import GalleryModal from "../components/BusinessCard/Modal";
 import ImageGallery from "../components/BusinessCard/ImageGallery";
@@ -78,7 +78,7 @@ END:VCARD`;
 
                 {/* Telephone */}
                 <div className="text-center mt-4">
-                    <img src={Telephone} className="mx-auto max-w-[50px] md:max-w-[50px]" />
+                    <img src={Whatsapp} className="mx-auto max-w-[45px] md:max-w-[45px]" />
                     <p className="mt-3 md:mt-4 font-serif text-charcoal text-xl">0403 627 285</p>
                 </div>
 

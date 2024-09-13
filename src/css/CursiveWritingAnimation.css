@@ -3,9 +3,9 @@
     stroke-dasharray: 2000; /* Adjust this value based on the path length */
     stroke-dashoffset: 2000; /* Start with the path hidden */
     animation: write 10s ease forwards, fillOpacity 4s ease forwards 1s; /* Stroke first, then fill opacity increases */
-    fill: #555554; /* Text fill color */
+    fill: url(#gold-gradient); /* Use the gradient */
     fill-opacity: 0; /* Start with no fill opacity */
-    stroke: #555554; /* Set stroke color */
+    stroke: url(#gold-gradient); /* Set stroke color */
     stroke-width: 1; /* Adjust stroke width */
 }
 
