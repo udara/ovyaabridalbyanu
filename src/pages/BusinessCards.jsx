@@ -78,7 +78,7 @@ END:VCARD`;
                 <div className="mx-auto w-full pt-12">
                     {/*<img src={Logo} className="max-w-[150px] mx-auto"/>*/}
 
-                    <div className="container mx-auto mb-[100px] mt-[70px] max-w-[150px]">
+                    <div className="container mx-auto mb-[90px] mt-[70px] max-w-[150px]">
                         <img src={bride} className="bride "/>
                             <img src={ob} className="ob"/>
                     </div>
