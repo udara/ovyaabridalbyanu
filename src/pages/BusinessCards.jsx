@@ -8,6 +8,8 @@ import Envelope from '../assets/img/envelope.png';
 import QR from '../assets/img/qr.png';
 import GalleryModal from "../components/BusinessCard/Modal";
 import ImageGallery from "../components/BusinessCard/ImageGallery";
+import bride from "../assets/img/logo/bride.png";
+import ob from "../assets/img/logo/OB.png";
 
 function BusinessCard() {
     const [menuVisible, setMenuVisible] = useState(false);
@@ -74,7 +76,13 @@ END:VCARD`;
                 </GalleryModal>
                 {/* Logo */}
                 <div className="mx-auto w-full pt-12">
-                    <img src={Logo} className="max-w-[150px] mx-auto"/>
+                    {/*<img src={Logo} className="max-w-[150px] mx-auto"/>*/}
+
+                    <div className="container mx-auto mb-[100px] mt-[70px] max-w-[150px]">
+                        <img src={bride} className="bride "/>
+                            <img src={ob} className="ob"/>
+                    </div>
+
                     <div className={`mx-auto min-h-[110px] w-[90%] mt-2`}>
                         <AnimatedLogo/>
                     </div>
