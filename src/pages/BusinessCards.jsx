@@ -78,12 +78,12 @@ END:VCARD`;
                 <div className="mx-auto w-full pt-12">
                     {/*<img src={Logo} className="max-w-[150px] mx-auto"/>*/}
 
-                    <div className="container mx-auto mb-[90px] mt-[70px] max-w-[150px]">
+                    <div className="container mx-auto mb-[110px] mt-[70px] max-w-[150px]">
                         <img src={bride} className="bride "/>
                             <img src={ob} className="ob"/>
                     </div>
 
-                    <div className={`mx-auto min-h-[110px] w-[90%] mt-2`}>
+                    <div className={`mx-auto min-h-[120px] w-[90%] mt-2`}>
                         <AnimatedLogo/>
                     </div>
                     <div className="flex items-center justify-center gap-3">
@@ -106,7 +106,7 @@ END:VCARD`;
                 {/* Email */}
                 <div className="text-center mt-4">
                     <img src={Envelope} className="mx-auto max-w-[50px] md:max-w-[50px]"/>
-                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-xl">anu@ovyaabridal.com.au</p>
+                    <p className="mt-2 md:mt-4 font-serif text-charcoal text-xl">anu.ovyaabridal@gmail.com</p>
                 </div>
 
                 {/* Toggleable Menu */}
