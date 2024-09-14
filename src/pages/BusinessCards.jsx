@@ -45,7 +45,7 @@ VERSION:3.0
 N:Rupasinghe ;Anu;;;
 FN:Anu Rupasinghe
 TEL;TYPE=CELL,VOICE:+61 0403627285
-EMAIL;TYPE=INTERNET,PREF:anu@ovyaabridal.com.au
+EMAIL;TYPE=INTERNET,PREF:anu.ovyaabridal@gmail.com
 END:VCARD`;
 
         const blob = new Blob([vCardData], {type: 'text/vcard'});
