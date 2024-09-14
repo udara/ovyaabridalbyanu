@@ -151,3 +151,54 @@
         transform: rotateY(720deg) translateY(0) rotateX(0deg) scale(1); /* Return to original scale */
     }
 }
+
+@keyframes fly {
+    0% {
+        transform: translate(0, 0) rotate(0deg); /* Start position */
+    }
+    25% {
+        transform: translate(100px, -50px) rotate(10deg); /* Move and tilt */
+    }
+    50% {
+        transform: translate(200px, 30px) rotate(-10deg); /* Move and tilt back */
+    }
+    75% {
+        transform: translate(300px, -60px) rotate(5deg); /* Move and tilt again */
+    }
+    100% {
+        transform: translate(400px, 0) rotate(0deg); /* End position */
+    }
+}
+
+@keyframes flutter {
+    0%, 100% {
+        transform: rotate(0deg); /* Neutral wing position */
+    }
+    50% {
+        transform: rotate(20deg); /* Flutter up */
+    }
+}
+
+.butterfly {
+    position: absolute;
+    width: 50px; /* Adjust butterfly size */
+    animation: fly 10s ease-in-out infinite, flutter 0.2s ease-in-out infinite; /* Flight and flutter animation */
+    transform-origin: center; /* Rotate from center for flutter */
+}
+
+@keyframes scale-bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional hover interaction */
+.butterfly:hover {
+    animation: scale-bounce 0.5s ease-in-out infinite, fly 10s ease-in-out infinite, flutter 0.2s ease-in-out infinite;
+}

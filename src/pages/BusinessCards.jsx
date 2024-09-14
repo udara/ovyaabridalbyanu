@@ -62,7 +62,7 @@ END:VCARD`;
 
     return (
         <div className="h-[calc(100dvh)] flex flex-col justify-between items-center w-full md:max-w-[500px] mx-auto  ">
-            <div className="flex flex-col justify-between flex-grow w-full bg-cover bg-[#e8e6d9]">
+            <div className="flex flex-col justify-between flex-grow bg-bc w-full bg-cover bg-[#ece2e1]">
                 <GalleryModal isVisible={galleryModalVisible} onClose={toggleGalleryModal}>
                     {/* Image Gallery */}
                     <ImageGallery images={images}/>
@@ -87,7 +87,7 @@ END:VCARD`;
                         <AnimatedLogo/>
                     </div>
                     <div className="flex items-center justify-center gap-3">
-                        <img className="max-w-[80px] md:max-w-[100px]" src={Spear}/>
+                        <img className="max-w-[80px]  md:max-w-[100px]" src={Spear}/>
                         <p className="font-serif text-charcoal font-bold text-2xl md:text-xl">By Anu</p>
                         <img className="max-w-[80px] md:max-w-[100px] scale-x-[-1]" src={Spear}/>
                     </div>

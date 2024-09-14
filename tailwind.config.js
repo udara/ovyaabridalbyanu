@@ -16,6 +16,7 @@ export default {
             },
             backgroundImage: {
                 bc: "url('../images/businessCard.png')",
+                bc1: "url('../images/bg-1.png')",
             },
         },
         colors: {

@@ -1,8 +1,14 @@
 import React from 'react';
 import '../css/CursiveWritingAnimation.css'; // Move the CSS into a separate file
+import butterfly from '../assets/img/butterfly.png'
 
 const AnimatedLogo = () => {
     return (
+        <div className={`relative`}>
+            {/*<div style={{position:"fixed", top:207, left:15}} className={`fixed butterfly `}>*/}
+            {/*<img src={butterfly} className={}/>*/}
+            {/*</div>*/}
+
         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
             <defs>
                 <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -46,6 +52,7 @@ const AnimatedLogo = () => {
                   fill="#020202"/>
             {/* Add more paths as needed */}
         </svg>
+        </div>
     );
 };
 
