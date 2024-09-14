@@ -113,27 +113,41 @@
 
 .bride {
     position: absolute;
-    z-index: 2; /* Ensure the bride image stays on top */
-
+    z-index: 2; /* Keep the bride image on top */
+    width: 200px; /* Adjust size as needed */
 }
 
 .ob {
     position: absolute;
-    z-index: 1; /* Ensure the ob image stays behind the bride */
-
-    animation: spin-coin 4s ease-out forwards; /* Animation duration and easing */
+    z-index: 1; /* Keep the ob image behind the bride */
+    width: 250px; /* Adjust size as needed */
+    animation: hover-spin 6s ease-in-out forwards; /* Spin and hover animation */
     transform-origin: center; /* Spin around the center */
-    transform-style: preserve-3d; /* Ensure 3D effect during spin */
+    transform-style: preserve-3d; /* Maintain 3D perspective */
 }
 
-@keyframes spin-coin {
+@keyframes hover-spin {
     0% {
-        transform: rotateY(0deg);
+        transform: rotateY(0deg) translateY(0) rotateX(0deg); /* Start position */
+        opacity: 1; /* Full opacity */
+    }
+    25% {
+        transform: rotateY(180deg) translateY(-10px) rotateX(10deg); /* Tilt slightly */
+        opacity: 0.9; /* Slight fade for effect */
     }
     50% {
-        transform: rotateY(360deg); /* One full spin */
+        transform: rotateY(360deg) translateY(0) rotateX(0deg); /* Spin complete, return to original position */
+        opacity: 1; /* Full opacity */
+    }
+    75% {
+        transform: rotateY(540deg) translateY(-10px) rotateX(10deg); /* Tilt slightly again */
+        opacity: 0.9; /* Slight fade for effect */
     }
     100% {
-        transform: rotateY(720deg); /* Two full spins and stop */
+        transform: rotateY(720deg) translateY(0) rotateX(0deg) scale(1.05); /* Complete spin, slight bounce up */
+        opacity: 1; /* Full opacity */
+    }
+    105% {
+        transform: rotateY(720deg) translateY(0) rotateX(0deg) scale(1); /* Return to original scale */
     }
 }
