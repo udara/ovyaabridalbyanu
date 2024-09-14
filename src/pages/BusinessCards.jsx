@@ -60,7 +60,7 @@ END:VCARD`;
 
     return (
         <div className="h-[calc(100dvh)] flex flex-col justify-between items-center w-full md:max-w-[500px] mx-auto  ">
-            <div className="flex flex-col justify-between flex-grow w-full bg-bc bg-cover bg-cream">
+            <div className="flex flex-col justify-between flex-grow w-full bg-cover bg-[#e8e6d9]">
                 <GalleryModal isVisible={galleryModalVisible} onClose={toggleGalleryModal}>
                     {/* Image Gallery */}
                     <ImageGallery images={images}/>
