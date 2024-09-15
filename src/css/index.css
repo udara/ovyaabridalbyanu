@@ -109,6 +109,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 .bride {
@@ -198,7 +199,23 @@
     }
 }
 
-/* Optional hover interaction */
-.butterfly:hover {
-    animation: scale-bounce 0.5s ease-in-out infinite, fly 10s ease-in-out infinite, flutter 0.2s ease-in-out infinite;
+.gradient-border {
+    position: relative;
+    border-radius: 9999px; /* fully rounded */
+    padding: 5px; /* This creates a 5px border effect */
 }
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(to right, #fff 20%, #fff 40%, #f3e5ab 50%, #f3e5ab 55%, #fff 70%, #fff 100%);
+    z-index: -1; /* Ensures the border is behind the content */
+    padding: 5px; /* Creates the 5px width for the border */
+}
+
+
