@@ -20,12 +20,8 @@ function App() {
         <Provider store={store}>
             <Router>
                 <Routes>
-                    <Route path='/bc' exact element={<BusinessCards/>}/>
-                    <Route path='/bc2' element={<BusinessCard2/>}/>
-                    <Route path='/bc3' element={<BusinessCard3/>}/>
-                    <Route path='/bc4' element={<BusinessCard4/>}/>
-                    <Route path='/bc5' element={<BusinessCard5/>}/>
-                    <Route path='*' element={<BusinessCards/>}/>
+                    <Route path='/bc' exact element={<BusinessCard4/>}/>
+                    <Route path='*' element={<BusinessCard4/>}/>
                 </Routes>
             </Router>
         </Provider>
